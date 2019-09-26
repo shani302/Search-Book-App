@@ -1,6 +1,6 @@
 {
     "booksService": {
-        "apiKey": "AIzaSyAkycFO6Y25_0_7QtO59pKvFVHLbOHxM8I",
+        "apiKey": "",
         "apiUrl": "https://www.googleapis.com/books/v1/volumes",
         "maxItemsInResponse": 20,
         "responseItems": [
