@@ -1,0 +1,17 @@
+section {
+    height: 100%;
+    background-color: lightgrey;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 13% 80% 7%;
+    grid-auto-columns: repeat(12, 1fr);
+}
+
+.main {
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 0px;
+    padding: 20px;
+    padding-bottom: 40px;
+}

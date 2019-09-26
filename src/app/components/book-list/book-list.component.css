@@ -1,0 +1,29 @@
+:host {
+    display: block;
+}
+
+.card {
+    height: 250px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    margin-right: 25px;
+    margin-left: 32px;
+    border-top: 1px solid #eee;
+    border-radius: 0px;
+    padding-top: 15px;
+}
+
+.image {
+    padding-left: 12px;
+}
+
+.card-title {
+    padding-bottom: 5px;
+    margin-bottom: 0.1rem;
+    color: rgb(23, 112, 82);
+}
+
+.card-body {
+    padding: 5px;
+}

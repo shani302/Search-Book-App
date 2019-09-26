@@ -1,0 +1,13 @@
+.thumb-img-wrapper {
+    width: 140px;
+    height: 200px;
+}
+
+.thumb-img-wrapper>* {
+    width: 100%;
+}
+
+.thumb-img-wrapper>.bg {
+    background-color: #bbbbbb;
+}
+

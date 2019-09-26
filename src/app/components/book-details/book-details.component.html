@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row product-block" *ngIf="book">
+            <div class="col-12 col-lg-2"></div>
+        <div class="col-12 col-lg-2">
+            <app-image id="image" [src]="book.smallThumbnailUrl" [alt]="'thumbnail'" style="width: 0%"></app-image>
+            <ng-template #img>
+                <app-image [src]="book.smallThumbnailUrl" [alt]="'thumbnail'"></app-image>
+            </ng-template>
+        </div>
+        <div class="product-info animate-in col-12 col-lg-8" data-component="[&quot;ProductInfo&quot;]"
+            style="visibility: inherit; opacity: 1;">
+            <div class="row">
+                <div class="col-xs-12 offset-md-2 col-md-8 offset-lg-0 col-lg-12">
+                    <h1 class="product-title"
+                        style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        {{book.title}}</h1>
+                    <h5 class="product-title"
+                        style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        {{book.subtitle}}</h5>
+                </div>
+                <div class="col-xs-12 offset-md-2 col-md-8 offset-lg-0 col-lg-12">
+                    <p><small>{{ getInfos(book) }}</small>
+                    </p>
+                    <div *ngIf="book.description">
+                        <strong>Description</strong>
+                        <p>{{book.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

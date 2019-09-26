@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card mb-3 animated fadeIn" *ngFor="let book of books; let i = index; trackBy: trackByIndex">
+        <div class="row no-gutters">
+            <div class="image">
+                <div class="col-xl-1 col-md-3 col-sm-3 col-5">
+                    <a *ngIf="book.smallThumbnailUrl else img" routerLink="/book-details/{{book.id}}">
+                        <app-image [src]="book.smallThumbnailUrl" [alt]="'thumbnail'"></app-image>
+                    </a>
+                    <ng-template #img>
+                        <app-image [src]="book.smallThumbnailUrl" [alt]="'thumbnail'"></app-image>
+                    </ng-template>
+                </div>
+            </div>
+            <div class="col-xl-7 col-md-6 col-sm-6 col-5">
+                <div class="card-body">
+                    <a routerLink="/book-details/{{book.id}}">
+                        <h5 class="card-title">{{ book.title }}</h5>
+                    </a>
+                    <h6 *ngIf="book.subtitle" class="subtitle font-italic font-weight-normal prefix-line">
+                        {{ book.subtitle | slice:0:MAX_SUBTITLE_LEN }}
+                        <span class="more-placeholder" *ngIf="book.subtitle.length > MAX_SUBTITLE_LEN">...</span>
+                    </h6>
+                    <p class="card-text">
+                        <small class="text-muted prefix-line">
+                            {{ getInfos(book) }}
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
