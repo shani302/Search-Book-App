@@ -11,3 +11,4 @@ Clone and npm install. In order to use it with unlimited api calls, you have to 
 
 This application is only using the "list" functionality of the books api, so no Oauth 2 is needed at all.
 
+in addition, The password for login must be 123456, unless changIng it in the code
